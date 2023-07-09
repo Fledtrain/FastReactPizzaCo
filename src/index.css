@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
 
 * {
   margin: 0;
@@ -11,11 +11,11 @@ html {
 }
 
 body {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   color: #252525;
   font-weight: 400;
   background-color: #f7f2e9;
-  border-bottom: 1.6rem solid #edc84b;
+  border-bottom: 1.6rem solid #a78900;
   min-height: 100vh;
   padding: 3.2rem;
   padding-bottom: 6rem;
@@ -32,6 +32,7 @@ body {
 }
 
 /* *************** */
+/* Header */
 
 .header {
   align-self: stretch;
@@ -39,7 +40,7 @@ body {
 
 .header h1 {
   /* Non-accessible color */
-  color: #edc84b;
+  color: #a78900;
   /* color: #af8602; */
 
   text-transform: uppercase;
@@ -55,10 +56,10 @@ body {
 .header h1::before,
 .header h1::after {
   display: block;
-  content: '';
+  content: "";
   height: 3px;
   width: 4rem;
-  background-color: #edc84b;
+  background-color: #a78900;
   position: absolute;
   top: calc(50% - 1px);
 }
@@ -72,6 +73,7 @@ body {
 }
 
 /* *************** */
+/* Menu */
 
 .menu {
   display: flex;
@@ -141,7 +143,7 @@ body {
 }
 
 .pizza.sold-out {
-  color: #888;
+  color: #6f6f6f;
 }
 
 .pizza.sold-out img {
@@ -150,6 +152,7 @@ body {
 }
 
 /* *************** */
+/* Footer */
 
 .footer {
   font-size: 1.4rem;
@@ -168,7 +171,7 @@ body {
   border: none;
   font-size: 1.4rem;
   font-weight: 500;
-  background-color: #edc84b;
+  background-color: #a78900;
   padding: 1.4rem 3.2rem;
   cursor: pointer;
   transition: all 0.2s;
@@ -185,3 +188,92 @@ SPACING SYSTEM (px)
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
 */
+
+/* Smaller Screen Sizes */
+
+@media screen and (max-width: 850px) {
+  .header h1::before,
+  .header h1::after {
+    display: block;
+    content: "";
+    height: 3px;
+    width: 2rem;
+    background-color: #edc84b;
+    position: absolute;
+    top: calc(50% - 1px);
+  }
+}
+@media screen and (max-width: 800px) {
+  .header h1::before,
+  .header h1::after {
+    display: block;
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #edc84b;
+    position: absolute;
+    top: calc(50% - 1px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2.4rem;
+    padding-bottom: 4.8rem;
+  }
+
+  .header h1 {
+    font-size: 4.8rem;
+  }
+
+  .menu h2 {
+    font-size: 2rem;
+  }
+
+  .menu > p {
+    font-size: 1.4rem;
+  }
+
+  .pizzas {
+    grid-template-columns: 1fr;
+  }
+
+  .pizza img {
+    width: 8rem;
+  }
+
+  .pizza div {
+    gap: 0.4rem;
+  }
+
+  .pizza h3 {
+    font-size: 1.8rem;
+  }
+
+  .pizza p {
+    font-size: 1.2rem;
+  }
+
+  .pizza span {
+    font-size: 1.4rem;
+  }
+
+  .footer {
+    font-size: 1.2rem;
+  }
+  .order > p {
+    text-align: center;
+  }
+  .footer > p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  .footer > p{
+    font-size: 1.15rem;
+  }
+}
